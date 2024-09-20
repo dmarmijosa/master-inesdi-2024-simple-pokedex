@@ -1,0 +1,24 @@
+.team-section {
+    ul {
+        li {
+            width: 6rem;
+            margin-right: 1rem;
+            background-repeat: no-repeat;
+            height: 5rem;
+
+        }
+    }
+}
+
+.button-delete {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
