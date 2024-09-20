@@ -7,7 +7,7 @@ export default defineConfig({
   base: "./",
   plugins: [react(), tsconfigPaths()],
   build: {
-    outDir: "dist",
+    outDir: "docs",
   },
   server: {
     host: "127.0.0.1",
