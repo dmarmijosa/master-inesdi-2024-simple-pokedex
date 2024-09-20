@@ -40,16 +40,12 @@ export function Pokedex() {
   const fetchWeaknesses = async () => {
     if (selectedPokemon) {
       const typeUrls = selectedPokemon.types.map((type: { type: { url: string } }) => type.type.url);
-      console.log(typeUrls)
       const weaknessesSet = new Set<string>();
-
       for (const url of typeUrls) {
         const response = await fetch(url);
         const data = await response.json();
         const doubleDamageFrom: { name: string }[] = data.damage_relations.double_damage_from;
-        console.log(doubleDamageFrom);
         doubleDamageFrom.forEach((weakness) => weaknessesSet.add(weakness.name));
-
         setWeaknesses(Array.from(weaknessesSet));
       }
     }
